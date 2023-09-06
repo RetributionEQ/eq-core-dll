@@ -4,7 +4,7 @@
 
 // isGammaRestoreOnCrashEnabled. When eqgame crashes, this restores your gamma. future EQ clients have this enabled.
 // This also may fix eq trying to modify your gamma settings
-bool isGammaRestoreOnCrashEnabled = false;
+bool isGammaRestoreOnCrashEnabled = true;
 
 // isCpuSpeedFixEnabled is recommended to be true. Some CPUs have a symptom where the game runs too fast, future EQ clients have this enabled
 // if a person reports the game running too fast, try enabling and giving this DLL.
@@ -32,7 +32,7 @@ bool isHeroicDisabled = false;
 bool isMaxHPFixEnabled = false;
 
 // isPatchmeDisabled if set to true will let you double click eqgame.exe and not get the "Please run EverQuest" message, will start properly
-bool isPatchmeDisabled = false;
+bool isPatchmeDisabled = true;
 
 // isFoodDrinkSpamDisabled if set to true will stop you are hungry/thirsty messages to display on client. If server side isn't disabled, you can still get negative effects.
 bool isFoodDrinkSpamDisabled = false;

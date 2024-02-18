@@ -596,6 +596,8 @@
 #define EQ_Character__CastRay_x                                    0x8D0520
 #define EQ_Character__CastSpell_x                                  0x43A830
 #define EQ_Character__Cur_HP_x                                     0x449E00
+#define EQ_Character__Cur_Mana_x                                   0x4442E0
+#define EQ_Character__Cur_Endurance_x                              0x444170
 #define EQ_Character__GetAACastingTimeModifier_x                   0x4336D0
 #define EQ_Character__GetCharInfo2_x                               0x7DB210
 #define EQ_Character__GetFocusCastingTimeModifier_x                0x42C9A0

@@ -145,16 +145,21 @@ FUNCTION_AT_ADDRESS(int EQ_Item::CanDrop(bool,int,int,int),EQ_Item__CanDrop); //
 #endif
 
 ///////////////////////////////////////////////////////////////////
-// gah, i hate sony
 #ifdef EQ_Character__Max_Endurance_x
-FUNCTION_AT_ADDRESS(int  EQ_Character1::Max_Endurance(int),EQ_Character__Max_Endurance);
+FUNCTION_AT_ADDRESS(int  EQ_Character1::Max_Endurance(int), EQ_Character__Max_Endurance);
 #endif
 //fuck virtual
 #ifdef EQ_Character__Max_Mana_x
 FUNCTION_AT_ADDRESS(int EQ_Character1::Max_Mana(int), EQ_Character__Max_Mana);
 #endif 
 #ifdef EQ_Character__Max_HP_x
-FUNCTION_AT_ADDRESS(int  EQ_Character1::Max_HP(int,int),EQ_Character__Max_HP);
+FUNCTION_AT_ADDRESS(int  EQ_Character1::Max_HP(int, int), EQ_Character__Max_HP);
+#endif
+#ifdef EQ_Character__Cur_Mana_x
+FUNCTION_AT_ADDRESS(int  EQ_Character1::Cur_Mana(int), EQ_Character__Cur_Mana);
+#endif
+#ifdef EQ_Character__Cur_Endurance_x
+FUNCTION_AT_ADDRESS(int  EQ_Character1::Cur_Endurance(int), EQ_Character__Cur_Endurance);
 #endif
 /////////////////////////////////////////////////////////////////////
 

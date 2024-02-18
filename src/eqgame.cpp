@@ -785,9 +785,25 @@ void InitHooks()
 
 	DWORD var = (((DWORD)0x008C4CE0 - 0x400000) + baseAddress);
 
-	if (isCpuSpeedFixEnabled) {
+	if (is32BitItemLinksEnabled) {
+		DWORD varArray = (((DWORD)0x009BFF6D - 0x400000) + baseAddress);
+		var = (((DWORD)0x004ED03B - 0x400000) + baseAddress);
+		PatchA((DWORD*)var, "\x4C", 1);
+		var = (((DWORD)0x004ED051 - 0x400000) + baseAddress);
+		PatchA((DWORD*)var, (DWORD*)&varArray, 4);
+		var = (((DWORD)0x004ED072 - 0x400000) + baseAddress);
+		PatchA((DWORD*)var, (DWORD*)&varArray, 4);
+		var = (((DWORD)0x007BBC9A - 0x400000) + baseAddress);
+		PatchA((DWORD*)var, (DWORD*)&varArray, 4);
+		var = (((DWORD)0x007BBD77 - 0x400000) + baseAddress);
+		PatchA((DWORD*)var, (DWORD*)&varArray, 4);
+		var = (((DWORD)0x009BFF6D - 0x400000) + baseAddress);
+		PatchA((DWORD*)var, "\x25\x30\x38\x58", 4);
+		var = (((DWORD)0x00A1ACE0 - 0x400000) + baseAddress);
+		PatchA((DWORD*)var, "\x4F", 1);
+	}
 
-		
+	if (isCpuSpeedFixEnabled) {		
 		CPUID cpuID(0x80000007); // Get CPU vendor
 
 		bool isCandidate = false;
